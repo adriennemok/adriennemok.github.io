@@ -2,48 +2,29 @@
 /*global $ */
 
 $(document).ready(function () {
-    "use strict";
-    
-    // Parallax Effect
-    var jumboHeight = $('.jumbotron').outerHeight();
-    function parallax() {
-        var scrolled = $(window).scrollTop();
-        $('.bg').css('height', (jumboHeight - scrolled) + 'px');
-    }
-
-    $(window).scroll(function (e) {
-        parallax();
-    });
-    
+    "use strict";    
     // Text Fader
-    $('.flyer>span:not(:first-child)').hide();
-    var count = 1;
-    setInterval(function () {
-        var objs = $('.flyer>span');
-        objs.hide();
-        $(objs[count % objs.length]).fadeIn();
-        count++;
-    }, 1000);
-    
-    //code on carousel settings
-    $('#myCarousel').carousel({
-        interval: 5000,
-        pause: "hover"
-    });
-    
-    // Activate Carousel
-    $("#myCarousel").carousel();
+//    $('.flyer>span:not(:first-child)').hide();
+//    var count = 1;
+//    setInterval(function () {
+//        var objs = $('.flyer>span');
+//        objs.hide();
+//        $(objs[count % objs.length]).fadeIn();
+//        count++;
+//    }, 2000);
+        
+var quotes = $(".delayedText");
+var quoteIndex = -1;
 
-    // Enable Carousel Indicators
-    $(".item").click(function () {
-        $("#myCarousel").carousel(1);
-    });
+function showNextQuote() {
+    ++quoteIndex;
+    quotes.eq(quoteIndex % quotes.length)
+        .fadeIn(1000)
+        .delay(1000)
+        .fadeOut(1000, showNextQuote);
+}
 
-    // Enable Carousel Controls
-    $(".left").click(function () {
-        $("#myCarousel").carousel("prev");
-    });
-    
+showNextQuote();
     //smooth scrolling
     $('a[href^="#"]').on('click', function (e) {
         e.preventDefault();
