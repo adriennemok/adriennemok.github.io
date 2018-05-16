@@ -99,12 +99,18 @@ header p{
     font-size: 15px;
     
 }
+
+.btn-clear:visited{
+  color:#FFF
+}
+
 .btn-clear:hover
 {
     color: #000;
     background-color: #FFF;
     font-color: #0080FF;
 }
+
 
 .item *{
     text-align: left;
