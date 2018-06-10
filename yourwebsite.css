@@ -236,7 +236,8 @@ img {
 		bottom: 100px;
 		left: 20px;
 		right: 20px;
-		top: 20px;		
+		top: 20px;	
+        background-attachment: initial;
 	}
 	.jumbotron .container { top: 20%; padding-top: 0px; }
 	.jumbotron .scroll-down { width: 100%; right: 0px; }
