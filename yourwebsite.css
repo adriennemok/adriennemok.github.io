@@ -234,7 +234,7 @@ img {
 #profile .flyer {color: slategray;}
 
 
-@media (max-width: 767px) { 
+@media (max-width: 1366px) { 
     
     header{
     background-attachment: scroll;
