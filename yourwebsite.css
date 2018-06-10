@@ -69,6 +69,7 @@ header{
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+    text-align: center;
 }
 
 header h1{
@@ -77,6 +78,7 @@ header h1{
     padding-bottom: 20px;
     border-bottom-color: rgba(255,255,255,0.35); 
     display: inline-block;
+    
 }
 
 header p{
@@ -244,7 +246,19 @@ img {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-}
+    }
+    
+    header h1{
+    font-size:50px;
+    border-bottom: 1px solid #FFFFFF; 
+    padding-bottom: 20px;
+    border-bottom-color: rgba(255,255,255,0.35); 
+    display: inline-block;
+    }
+    
+    header p{
+    font-size:20;    
+    }
 	.jumbotron:before {
 		bottom: 100px;
 		left: 20px;
